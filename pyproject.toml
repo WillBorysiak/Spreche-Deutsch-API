@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "sprechedeutsch"
+version = "0.1.0"
+description = ""
+authors = ["Will Borysiak <will.gains@icloud.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+psycopg = { extras = ["binary"], version = "^3.1.8" }
+uvicorn = { extras = ["standard"], version = "^0.20.0" }
+black = "^23.1.0"
+fastapi = "^0.92.0"
+sqlalchemy = "^2.0.4"
+alembic = "^1.9.4"
+python-dotenv = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.apitwenty"
