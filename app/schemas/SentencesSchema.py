@@ -1,15 +1,14 @@
 from pydantic import BaseModel
 
 
-class WordBase(BaseModel):
+class SentencesBase(BaseModel):
     index: int
     german: str
     english: str
-    gender: str
     category_index: int
 
 
-class WordResponse(WordBase):
+class SentencesResponse(SentencesBase):
     pass
 
     class Config:

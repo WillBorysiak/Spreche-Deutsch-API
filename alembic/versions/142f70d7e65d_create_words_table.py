@@ -18,5 +18,5 @@ def upgrade():
     op.create_table("words")
 
 
-def downgrade() -> None:
+def downgrade():
     pass
