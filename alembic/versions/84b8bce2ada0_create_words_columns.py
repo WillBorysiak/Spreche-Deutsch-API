@@ -20,7 +20,7 @@ def upgrade():
     op.add_column("words", sa.Column("german", sa.String(), nullable=False))
     op.add_column("words", sa.Column("english", sa.String(), nullable=False))
     op.add_column("words", sa.Column("gender", sa.String(), nullable=False))
-    op.add_column("words", sa.Column("category_index", sa.Integer(), nullable=False))
+    op.add_column("words", sa.Column("category", sa.String(), nullable=False))
 
 
 def downgrade():
@@ -28,4 +28,4 @@ def downgrade():
     op.drop_column("words", "german")
     op.drop_column("words", "english")
     op.drop_column("words", "gender")
-    op.drop_column("words", "category_index")
+    op.drop_column("words", "category")

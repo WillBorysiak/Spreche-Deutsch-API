@@ -2,7 +2,7 @@
 name = "sprechedeutsch"
 version = "0.1.0"
 description = ""
-authors = ["Will Borysiak <will.gains@icloud.com>"]
+authors = ["Will Borysiak"]
 readme = "README.md"
 
 [tool.poetry.dependencies]

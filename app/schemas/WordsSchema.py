@@ -6,7 +6,7 @@ class WordsBase(BaseModel):
     german: str
     english: str
     gender: str
-    category_index: int
+    category: str
 
 
 class WordsResponse(WordsBase):

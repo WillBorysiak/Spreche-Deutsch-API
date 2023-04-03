@@ -10,4 +10,4 @@ class Words(Base):
     german = Column(String, name="german", nullable=False)
     english = Column(String, name="english", nullable=False)
     gender = Column(String, name="gender", nullable=False)
-    category_index = Column(Integer, name="category_index", nullable=False)
+    category = Column(String, name="category", nullable=False)

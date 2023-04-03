@@ -5,7 +5,7 @@ class SentencesBase(BaseModel):
     index: int
     german: str
     english: str
-    category_index: int
+    category: str
 
 
 class SentencesResponse(SentencesBase):

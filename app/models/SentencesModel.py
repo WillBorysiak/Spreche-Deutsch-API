@@ -9,4 +9,4 @@ class Sentences(Base):
     index = Column(Integer, name="index", primary_key=True, nullable=False)
     german = Column(String, name="german", nullable=False)
     english = Column(String, name="english", nullable=False)
-    category_index = Column(Integer, name="category_index", nullable=False)
+    category = Column(String, name="category", nullable=False)
