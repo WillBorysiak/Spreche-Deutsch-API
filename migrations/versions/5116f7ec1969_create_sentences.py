@@ -1,29 +1,29 @@
-"""create sentences columns
+"""create sentences
 
-Revision ID: cd5a4ef10166
-Revises: 0778c1a6ed64
-Create Date: 2023-03-06 18:30:40.828913
+Revision ID: 5116f7ec1969
+Revises: c3e77c7f8487
+Create Date: 2024-05-15 09:33:55.699389
 
 """
+from typing import Sequence, Union
+
 import sqlalchemy as sa
 from alembic import op
 
 # revision identifiers, used by Alembic.
-revision = "cd5a4ef10166"
-down_revision = "0778c1a6ed64"
-branch_labels = None
-depends_on = None
+revision: str = '5116f7ec1969'
+down_revision: Union[str, None] = 'c3e77c7f8487'
+branch_labels: Union[str, Sequence[str], None] = None
+depends_on: Union[str, Sequence[str], None] = None
 
 
 def upgrade():
+    op.create_table("sentences")
     op.add_column("sentences", sa.Column("index", sa.Integer(), primary_key=True))
     op.add_column("sentences", sa.Column("german", sa.String(), nullable=False))
     op.add_column("sentences", sa.Column("english", sa.String(), nullable=False))
     op.add_column("sentences", sa.Column("category", sa.String(), nullable=False))
 
-
+    
 def downgrade():
-    op.drop_column("sentences", "index")
-    op.drop_column("sentences", "german")
-    op.drop_column("sentences", "english")
-    op.drop_column("sentences", "category")
+    op.drop_table("sentences")
