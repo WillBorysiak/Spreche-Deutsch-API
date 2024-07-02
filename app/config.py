@@ -1,15 +1,15 @@
-from pydantic import BaseSettings
+from pydantic import BaseSettings, AnyHttpUrl
 from starlette.middleware import Middleware
 from starlette.middleware.cors import CORSMiddleware
 
 
-# db config
 class Settings(BaseSettings):
     db_hostname: str
     db_port: str
     db_username: str
     db_password: str
     db_name: str
+    cors_origin: AnyHttpUrl
 
     class Config:
         env_file = ".env"
@@ -18,7 +18,7 @@ class Settings(BaseSettings):
 settings = Settings()
 
 # cors config
-origins = ["*"]
+origins = [f"{settings.cors_origin}"]
 
 middleware = [
     Middleware(
