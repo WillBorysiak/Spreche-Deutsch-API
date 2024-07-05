@@ -19,7 +19,7 @@ class Settings(BaseSettings):
 settings = Settings()
 
 # cors config
-origins = [f"{settings.cors_origin}"]
+origins = [settings.cors_origin]
 
 middleware = [
     Middleware(

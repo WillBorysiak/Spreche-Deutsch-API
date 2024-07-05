@@ -22,7 +22,7 @@ def root():
 
 @app.get("/test")
 def root():
-    return {"This is a test endpoint", settings.environment}
+    return {"This is a test endpoint to log CORS", settings.cors_origin}
 
 
 # CATEGORIES
