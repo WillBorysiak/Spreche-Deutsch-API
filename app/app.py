@@ -22,7 +22,7 @@ def root():
 
 @app.get("/test")
 def root():
-    return {"This is a test endpoint", settings.test_env}
+    return {"This is a test endpoint", settings.environment}
 
 
 # CATEGORIES
