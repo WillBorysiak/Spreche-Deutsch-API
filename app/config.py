@@ -10,6 +10,7 @@ class Settings(BaseSettings):
     db_password: str
     db_name: str
     cors_origin: AnyHttpUrl
+    test_env: str
 
     class Config:
         env_file = ".env"

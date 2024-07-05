@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException, status, Depends
 from sqlalchemy.orm import Session
 
 from .config import middleware
+from .config import settings
 from .database import database
 from .models.CategoriesModel import Categories
 from .models.SentencesModel import Sentences
@@ -17,6 +18,11 @@ app = FastAPI(middleware=middleware)
 @app.get("/")
 def root():
     return {"Welcome to the Spreche Deutsch API"}
+
+
+@app.get("/test")
+def root():
+    return {"This is a test endpoint", settings.test_env}
 
 
 # CATEGORIES
