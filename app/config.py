@@ -4,6 +4,7 @@ from starlette.middleware.cors import CORSMiddleware
 
 
 class Settings(BaseSettings):
+    environment: str
     db_hostname: str
     db_port: str
     db_username: str

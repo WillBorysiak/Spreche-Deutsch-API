@@ -9,6 +9,9 @@ DATABASE_URL = (
     f"{settings.db_hostname}:{settings.db_port}/{settings.db_name}"
 )
 
+if settings.environment == "production":
+    DATABASE_URL += "?sslmode=require"
+
 engine = create_engine(DATABASE_URL)
 session = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
