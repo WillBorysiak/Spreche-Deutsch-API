@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "sprechedeutsch"
-version = "0.1.0"
+name = "spreche-deutsch-api"
+version = "1.0.0"
 description = ""
 authors = ["Will Borysiak"]
 readme = "README.md"
