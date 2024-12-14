@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from app.config import middleware
+from app.database.config import middleware
 from app.routes import categories, words, sentences
 
 app = FastAPI(middleware=middleware)

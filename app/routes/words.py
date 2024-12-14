@@ -1,7 +1,7 @@
 from fastapi import HTTPException, status, Depends, APIRouter
 from sqlalchemy.orm import Session
 
-from app.database import database
+from app.database.database import database
 from app.models.WordsModel import Words
 from app.schemas.WordsSchema import WordsResponse
 
