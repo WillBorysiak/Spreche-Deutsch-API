@@ -20,7 +20,7 @@ class Settings(BaseSettings):
 settings = Settings()
 
 # cors config
-origins = [settings.cors_origin]
+origins = ["https://www.sprechedeutsch.com"]
 
 middleware = [
     Middleware(
