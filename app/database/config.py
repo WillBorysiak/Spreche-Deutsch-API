@@ -1,7 +1,7 @@
+from fastapi.middleware import Middleware
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import AnyHttpUrl, Field
 from pydantic_settings import BaseSettings
-from starlette.middleware import Middleware
-from starlette.middleware.cors import CORSMiddleware
 
 
 class Settings(BaseSettings):
@@ -25,9 +25,9 @@ origins = [settings.cors_origin]
 middleware = [
     Middleware(
         CORSMiddleware,
-        allow_origins=origins,
+        allow_origins="*",
         allow_credentials=True,
-        allow_methods=["GET"],
+        allow_methods=["*"],
         allow_headers=["*"],
     )
 ]
