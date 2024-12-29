@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
 class SentencesBase(BaseModel):
@@ -9,7 +9,4 @@ class SentencesBase(BaseModel):
 
 
 class SentencesResponse(SentencesBase):
-    pass
-
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)

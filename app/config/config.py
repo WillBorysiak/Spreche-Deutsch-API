@@ -4,6 +4,8 @@ from pydantic import Field
 from pydantic_settings import BaseSettings
 
 
+# env config
+
 class Settings(BaseSettings):
     environment: str = Field(validation_alias="ENVIRONMENT")
     db_hostname: str = Field(validation_alias="DB_HOSTNAME")
@@ -20,6 +22,7 @@ class Settings(BaseSettings):
 settings = Settings()
 
 # cors config
+
 origins = [settings.cors_origin]
 
 middleware = [
